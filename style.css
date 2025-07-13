@@ -1,0 +1,366 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8f0; /* dipilih warna netral */
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* === Judul Bagian === */
+.board-title {
+  padding: 1rem;
+  font-size: 2rem;
+  color: #ff6f91;
+  background-color: #ffe4e1;
+  margin: 0;
+}
+
+.title {
+  margin: 2rem 0 1rem;
+  font-size: 2rem;
+  color: #d63384;
+}
+
+
+/* Efek bunga jatuh */
+.flower {
+    position: absolute;
+    top: -50px;
+    font-size: 24px; /* Ukuran bunga */
+    color: pink;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Animasi jatuh */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+/* === Text Bergerak === */
+.marquee {
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    background: pink;
+    padding: 5px;
+    text-align: center;
+    animation: scrollText 10s linear infinite;
+    z-index: 100;
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* === Papan Sticky Note === */
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1rem;
+  min-height: 100vh;
+  background: url('image/background.jpg'); /* opsional */
+  background-size: cover;
+}
+/* === Papan Sticky Note === */
+.board2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1rem;
+  min-height: 100vh;
+  background: url('image/background.jpg'); /* opsional */
+  background-size: cover;
+}
+
+/* Note klasik */
+.note {
+  width: 90px;
+  min-height: 70px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+  position: relative;
+  transform: rotate(var(--angle));
+  background-color: var(--color);
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  transition: transform 0.3s ease;
+}
+
+.note:hover {
+  transform: scale(1.2) rotate(var(--angle));
+  z-index: 10;
+}
+
+/* Sticky note modern */
+.sticky-note {
+  width: 180px;
+  min-height: 150px;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  font-size: 14px;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  z-index: 1;
+}
+
+.sticky-note:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.doll-container {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.doll-container img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.doll2-container {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.doll2-container img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1px;
+}
+
+.doll2-container h2 {
+  font-size: 18px;
+}
+/* === Playlist Audio === */
+.player-container {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.player-container img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.player-container h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #d63384;
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+.controls button {
+  font-size: 24px;
+  margin: 0 10px;
+  padding: 10px 15px;
+  background: #ffb3c1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background: #ff4d6d;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: #d63384;
+  transition: width 0.2s;
+}
+
+#currentTime,
+#duration {
+  font-size: 12px;
+}
+
+.audio-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+/* Container tambahan */
+.info-container {
+  background: #fffafc;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  max-width: 300px;
+  text-align: left;
+  font-size: 21px;
+  color: #444;
+
+  font-family: 'Patrick Hand', cursive; /* tambahkan ini */
+  line-height: 1.6;
+}
+
+.info-container h3 {
+  color: #ff69b4;
+  margin-bottom: 1rem;
+}
+
+/* === Carousel Galeri === */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track h3 {
+  color: #ff0088;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  margin: 0 4px;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+  left: calc(100%);
+  position: relative;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-height: 500px; /* sesuaikan tinggi maksimum sesuai kebutuhan */
+  object-fit: contain;  /* atau 'contain' jika ingin seluruh gambar terlihat */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.caption {
+  margin-top: 1rem;
+  line-height: 10px
+}
+
+/* Tombol Navigasi Carousel */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d63384;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  user-select: none;
+}
+
+.nav.prev {
+  left: 0;
+}
+
+.nav.next {
+  right: 0;
+}
+
+/* === Form Tambah Sticky Note (Opsional) === */
+.form-container {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 250px;
+  height: 80px;
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+select, button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
