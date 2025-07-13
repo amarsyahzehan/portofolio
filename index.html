@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dari abang untuk Rere</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="marquee">🧸🧸🧸🧸🧸 Abang sayang Rere! 🧸🧸🧸🧸🧸 Rere sayang abang! 🧸🧸🧸🧸🧸</div>
+
+
+
+<body>
+  <!-- Container untuk animasi bunga -->
+  <div id="flower-container"></div>
+
+<!-- Bagian 1: Papan Harapan & Kenangan -->
+<section class="sticky-section">
+  <h1 class="board-title">💌 Papan Harapan & Kenangan (14 motivation, 14 love, 14 healing, 14 memory)💌</h1>
+  <div class="board" id="board">
+    <!-- Sticky notes akan di-generate lewat JS -->
+  </div>
+</section>
+  
+  <hr>
+  
+<!-- Bagian 2: Playlist & Catatan Abang (DALAM SATU FLEX) -->
+<section class="audio-section">
+  <div class="doll-container">
+    <img id="doll" src="image/doll.jpg" alt="doll art">
+    <h2 id="judul">kasih nama sapa bebek lucu ini?</h2>
+    </div>
+  </div>
+  
+  <div class="player-container">
+    <img id="thumbnail" src="image/thumb1.jpg" alt="Album Art">
+    <h2 id="title">Lagu Senang</h2>
+    
+    <audio id="audio" src="audio/song1.mp3"></audio>
+    
+    <div class="controls">
+      <button id="playPauseBtn">▶️</button>
+      <button id="nextBtn">⏭️</button>
+    </div>
+    
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <span id="duration">0:00</span>
+    </div>
+  </div>
+  
+  <div class="info-container">
+    <h3>💬 Last Note (No.56)</h3>
+    <p>If you only have 10 people you love, I want to be one of them. If you have 1 lover, I hope it's me. 
+      If you no longer feel affection, it means I have left this world. Even if the world is against you, I will always be with you</p>
+      <p>from your Simple Man, Amar~</p>
+    </div>
+
+    <div class="doll2-container">
+      <img id="doll2" src="image/doll2.jpg" alt="doll art">
+      <h2 id="judul">Teddy Rereee yg baruu!!</h2>
+      </div>
+    </div>
+  </section>
+  <!-- Bagian 3: Galeri Cinta -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <h1 class="title">💖 Our Love Story 💖</h1>
+    <button class="nav prev" onclick="prevSlide()">❮</button>
+    
+    <div class="carousel-track">
+      <div class="carousel-slide active">
+        <img src="image/foto1.jpg" alt="Slide 1">
+        <div class="caption">
+          <h2>12 Mei 2024</h2>
+          <h3>1st Trip | Pantai Samboja tanah merah</h3>
+          <p>dulu awal ngerasa deket pas ngajak</p>
+          <p>dan bonceng Rere ke Samboja naik motor</p>
+          <p>Rere curi2 peluk abg malem karena dingin hihi</p>
+        </div>
+      </div>
+      
+      <div class="carousel-slide">
+        <img src="image/foto2.png" alt="Slide 2">
+        <div class="caption">
+          <h2>9 Juni 2024</h2>
+          <h3>Latihan Drone | Wisata Sawah Betapus</h3>
+          <p>belajar ngedrone bareng Rere di sawah</p>
+          <p>sebelumnya udah belajar sih di dekat</p>
+          <p>kontrakan, tapi ini belajar mapping :D</p>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <img src="image/foto3.jpeg" alt="Slide 3">
+        <div class="caption">
+          <h2>17 Juni 2024</h2>
+          <h3>Survei Irigasi | Kutai Kartanegara</h3>
+          <p>kerja bareng jadi surveyor,</p>
+          <p>pilot drone, presentasi di desa</p>
+          <p>dan ini juga jadi PKL Rere</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto4.jpg" alt="Slide 4">
+        <div class="caption">
+          <h2>14 Agustus 2024</h2>
+          <h3>1st time Feri | Terminal Kariangau</h3>
+          <p>untuk pertama kalinya naik kapal feri</p>
+          <p>bareng, walaupun malemnya berantem</p>
+          <p>tapi jadi kenangan yg ga terlupakan :'</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto5.jpg" alt="Slide 5">
+        <div class="caption">
+          <h2>14 Agustus 2024</h2>
+          <h3>1st time Adventure | Air Terjun Dinding Olo</h3>
+          <p>akhirnya sampai di tempat adventure pertama!</p>
+          <p>rasa syukur, senang, capek, sakit jadi satuu</p>
+          <p>this is the best first experience with nature</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto6.jpg" alt="Slide 6">
+        <div class="caption">
+          <h2>26 Oktober 2024</h2>
+          <h3>1st time Photobooth | BigMall Samarinda</h3>
+          <p>random lewat photobooth jadi pen cobain</p>
+          <p>masih belum tau pose dan cara pakainya</p>
+          <p>walaupun hasilnya kocak tapi tetep suka ngeliatnya</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto7.jpg" alt="Slide 7">
+        <div class="caption">
+          <h2>14 November 2024</h2>
+          <h3>Rere's Birthday | The Palace</h3>
+          <p>hari spesial untuk orang yg abg sayang</p>
+          <p>kado emas sbg bukti rasa sayangnya abg</p>
+          <p>insyaallah next ultah emas lagi aamiin..</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto8.png" alt="Slide 8">
+        <div class="caption">
+          <h2>20 November 2024</h2>
+          <h3>Presentasi bareng | Dinas PU Kukar</h3>
+          <p>asistensi kerjaan bareng, berdua Rere</p>
+          <p>mode serius dan pengalaman pertama Rere</p>
+          <p>Rere takut sama PPK Pak Yudrik wkwk</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto9.jpg" alt="Slide 9">
+        <div class="caption">
+          <h2>11 Januari 2025</h2>
+          <h3>1st time Museum Trip | Museum Samarinda</h3>
+          <p>abg udah balik ke samarinda dari Berau</p>
+          <p>langsung jalan bareng dan spot pertama</p>
+          <p>adalah museum samarinda di awal 2025</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto10.jpg" alt="Slide 10">
+        <div class="caption">
+          <h2>16 Januari 2025</h2>
+          <h3>Quality Time | Salma Shofa</h3>
+          <p>cari tempat yg bisa berenang, akhirnya</p>
+          <p>nemu Salma Shofa dan dapat bonus museum</p>
+          <p>tempatnya nyaman dan sepi, good experience</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto11.jpg" alt="Slide 11">
+        <div class="caption">
+          <h2>18 Februari 2025</h2>
+          <h3>2nd time Adventure | Bukit Bengkirai</h3>
+          <p>trip adventure yg kedua kalinya, kali</p>
+          <p>ini persiapan lebih matang dan terencana</p>
+          <p>di perjalanan ini juga Rere liat monyet xD</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto12.png" alt="Slide 12">
+        <div class="caption">
+          <h2>19 Februari 2025</h2>
+          <h3>2nd Trip | Pantai Tanah Merah Samboja</h3>
+          <p>ga cuma 1 spot, tapi langsung 2 spot</p>
+          <p>selanjut dari Bengkirai ke Pantai Samboja</p>
+          <p>ma'af walaupun gagal ngecamp, tapi tetep seru</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto13.jpg" alt="Slide 13">
+        <div class="caption">
+          <h2>23 Februari 2025</h2>
+          <h3>Quality Time (1st time met Toby) | Folder Air Hitam</h3>
+          <p>joging pagi random ketemu segerombolan kucing</p>
+          <p>salah satunya ada yg tjakep, dan diculik bawa pulang</p>
+          <p>tapi bukan foto Toby ini :(</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto14.jpg" alt="Slide 14">
+        <div class="caption">
+          <h2>15 Maret 2025</h2>
+          <h3>Buka Pasar Ramadhan | Happetite Bites</h3>
+          <p>beranikan diri cobain jualan pas ramadhan</p>
+          <p>banyak ilmu dan pengalaman yg didapat dari Rere</p>
+          <p>makasih yaa syg atas pengalaman berharganya!</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto15.jpg" alt="Slide 15">
+        <div class="caption">
+          <h2>25 Maret 2025</h2>
+          <h3>2nd time Museum Trip | Museum Mulawarman</h3>
+          <p>ke Tenggarong!, setelah museum samarinda</p>
+          <p>selanjutnya museum Tenggarong, amaze sama</p>
+          <p>hasil dokumentasi dan kamera yg diambil dan diedit</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto16.jpg" alt="Slide 16">
+        <div class="caption">
+          <h2>28 Maret 2025</h2>
+          <h3>Ramadhan Berbagi | Happetite Bites</h3>
+          <p>beberapa dari hasil keuntungan jualan diniatkan</p>
+          <p>dan direalisasikan untuk berbagi, keren banget idenya</p>
+          <p>Alhamdulillah semoga berkah dan bermanfaat</p>
+          <p>makasih ya udah ngajak berbuat baik, Rere keren!</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto17.jpg" alt="Slide 17">
+        <div class="caption">
+          <h2>17 April 2025</h2>
+          <h3>1st time makan ayam utuh | Richeese Factory</h3>
+          <p>udah dari lama Rere kepengen</p>
+          <p>makan ayam utuh di richeese</p>
+          <p>Alhamdulillah terkabul dan katanya enak wkwk</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto18.jpg" alt="Slide 18">
+        <div class="caption">
+          <h2>24 April 2025</h2>
+          <h3>1st time Gym bareng | Fitness Solution</h3>
+          <p>gym bareng biar sehat dan kuat</p>
+          <p>abg lajarin Rere pake alat</p>
+          <p>Rere lajarin abg karate!</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto19.jpg" alt="Slide 19">
+        <div class="caption">
+          <h2>29 April 2025</h2>
+          <h3>2nd time Photobooth | Samarinda Central Plaza</h3>
+          <p>lama ga photobooth, jadi kebetulan ketemu</p>
+          <p>dan cobain lagi photobooth di SCP</p>
+          <p>kali ini lebih bagus dari sebelumnya!</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto20.jpg" alt="Slide 20">
+        <div class="caption">
+          <h2>11 Mei 2025</h2>
+          <h3>3rd time Photobooth | Samarinda Square</h3>
+          <p>kali ke 3 photobooth!</p>
+          <p>ini yg terbaik dari sebelum2nya</p>
+          <p>udah tau pose dan gaya karena banyak referensi</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto21.png" alt="Slide 21">
+        <div class="caption">
+          <h2>16 Mei 2025</h2>
+          <h3>Quality Time | Kayyisa Waterpark</h3>
+          <p>sore2 mau bahas ide2 bisnis dan kerjaan</p>
+          <p>cari tempat dan ujungnya malah berenang</p>
+          <p>*berenangnya pke foto salmashofa 😗</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto22.jpg" alt="Slide 22">
+        <div class="caption">
+          <h2>17 Mei 2025</h2>
+          <h3>Event Moment "Pekan Literasi" | Bank Indonesia Samarinda</h3>
+          <p>dari dulu banyak simpan buku di kontrakan</p>
+          <p>pas banget ada event sumbang buku</p>
+          <p>dapat hadiah dan bisa foto bareng</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto23.png" alt="Slide 23">
+        <div class="caption">
+          <h2>30 Mei 2025</h2>
+          <h3>3rd time Adventure | Doyam Tangkolapan</h3>
+          <p>INI KETIGA KALINYA PERTULANGAN DI ALAM!</p>
+          <p>PERTAMA KALINYA CAMPING! PENGALAMAN PALING SERU</p>
+          <p>TERIMA KASIH UDAH RENCANAIN DENGAN SEMPURNA!</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto24.png" alt="Slide 24">
+        <div class="caption">
+          <h2>30 Mei 2025</h2>
+          <h3>3rd Trip | Penangkaran Rusa</h3>
+          <p>pas otw pulang dari paser menuju PPU</p>
+          <p>tiba2 liat penangkaran rusa dan cobain</p>
+          <p>pertama kali liat rusa dan dengar suara rusa 😆</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto25.png" alt="Slide 25">
+        <div class="caption">
+          <h2>30 Mei 2025</h2>
+          <h3>4th Trip | Pantai Tanjung Tengah</h3>
+          <p>sebelum ke penyebrangan sempatin ke pantai</p>
+          <p>walaupun sempat banyak pindah2 pantai</p>
+          <p>tapi tetep dapat momen bagus cari kerang dan ubur2</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto26.jpg" alt="Slide 26">
+        <div class="caption">
+          <h2>15 Juni 2025</h2>
+          <h3>Event Moment "Kala Fest" | Citra Niaga</h3>
+          <p>ada event di Citra Niaga tema Tempo Doloe</p>
+          <p>ngeliat makanan, sepeda dan permainan jadul</p>
+          <p>ada ngevlog dikit2 jugaa dan foto bareng!</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto27.jpg" alt="Slide 27">
+        <div class="caption">
+          <h2>18 Juni 2025</h2>
+          <h3>Medical Check Up | RS Dirgahayu</h3>
+          <p>Rerenya abang sakit 😢</p>
+          <p>berobat ke Dokter Jiwa dan konsultasi</p>
+          <p>dapat obat dan semoga cepat sembuh syg!</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/foto28.jpg" alt="Slide 28">
+        <div class="caption">
+          <h2>7 Juli 2025</h2>
+          <h3>Rere's Sempro | FT Unmul</h3>
+          <p>hari ini Rere sudah buktikan Rere hebat bgt</p>
+          <p>akhirnya Rere abg berhasil sampai sini</p>
+          <p>masih ada tahapan selanjutnya yaa</p>
+          <p>tetap semangat dan abang selalu dukung Rere</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="image/questionmark.jpg" alt="Slide 29">
+        <div class="caption">
+          <h2>Where should this story go next?</h2>
+          <h3>Choose our wishlist!</h3>
+          <p>MAU KEMANA TRIP ATAU ADVENTURE SELANJUTNYA?</p>
+          <p>HUTAN? GUNUNG? AIR TERJUN? PANTAI?</p>
+          <p>LET'S GO BERDUA!!!</p>
+        </div>
+      </div>
+      <!-- Tambahkan slide lain di sini -->
+    </div>
+
+    <button class="nav next" onclick="nextSlide()">❯</button>
+  </div>
+</section>
+
+  <div>Credit by Amarsyahzehan, 07 July 2025</div>
+
+  <!-- Efek Audio Hover untuk Sticky Notes -->
+  <audio id="hoverSound" src="hover-sound.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
